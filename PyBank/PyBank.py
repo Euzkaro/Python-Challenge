@@ -45,3 +45,16 @@ print("Average Change: $" + str(total_change/(count_months-1)))
 print("Greatest Increase in Profits: " + max_increase_month + " ($" + str(max_increase) + ")")
 print("Greatest Decrease in Profits: " + max_decrease_month + " ($" + str(max_decrease) + ")")
 
+
+#Text output
+
+text_file = open("PyBank_output.txt","w")
+text_file.write("________________________________________________" + "\n")
+text_file.write("       Financial Analysis Summary       " + "\n")
+text_file.write("________________________________________________" + "\n")
+text_file.write("Total Months: " + str(count_months) + "\n")
+text_file.write("Total: $" + str(total_revenue) + "\n")
+text_file.write("Average Change: $" + str(total_change/(count_months-1)) + "\n")
+text_file.write("Greatest Increase in Profits: " + max_increase_month + " ($" + str(max_increase) + ")" + "\n")
+text_file.write("Greatest Decrease in Profits: " + max_decrease_month + " ($" + str(max_decrease) + ")")
+text_file.close()
